@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 : "${CLAUDE_PLUGIN_ROOT:?CLAUDE_PLUGIN_ROOT is not set}"
-python "${CLAUDE_PLUGIN_ROOT}/tts/tts_hook.py"
+${TTS_PYTHON:-python} "${CLAUDE_PLUGIN_ROOT}/tts/tts_hook.py"

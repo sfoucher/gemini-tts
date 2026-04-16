@@ -29,7 +29,8 @@ Add to `~/.claude/settings.json`:
   },
   "env": {
     "GEMINI_API_KEY": "<your_key>",
-    "TTS_VOICE": "Zephyr"
+    "TTS_VOICE": "Zephyr",
+    "TTS_PYTHON": "python"
   }
 }
 ```
@@ -49,7 +50,7 @@ rm -f ~/.tts_muted    # unmute
 
 ## Voice
 
-Set `TTS_VOICE` in the `env` block of `~/.claude/settings.json` (default: `Zephyr`):
+Set `TTS_VOICE` and optionally `TTS_PYTHON` in the `env` block of `~/.claude/settings.json` (default: `Zephyr`):
 
 ```json
 "env": {
@@ -57,6 +58,8 @@ Set `TTS_VOICE` in the `env` block of `~/.claude/settings.json` (default: `Zephy
   "TTS_VOICE": "Aoede"
 }
 ```
+
+`TTS_PYTHON` defaults to `python` (must be on PATH). Set it to a full path if needed (e.g. `C:/DEV/Miniconda3/envs/claude/python.exe` on Windows with Miniconda).
 
 Available voices: Aoede, Charon, Fenrir, Kore, Leda, Orus, Puck, Schedar, Umbriel, Zephyr, Algieba, Algenib, Ankaa, Arcturus, Callirrhoe, Despina, Enceladus, Gacrux, Iocaste, Laomedeia, Lysithea, Propus, Pulcherrima, Rasalgethi, Sadachbia, Sadaltager, Sulafat, Vindemiatrix, Wasat, Zubenelgenubi.
 
