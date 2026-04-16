@@ -8,7 +8,7 @@ A Claude Code plugin that auto-speaks every Claude response aloud using Gemini T
 - Python on PATH with these packages installed:
 
 ```bash
-pip install google-genai sounddevice numpy
+pip install google-genai sounddevice
 ```
 
 - A Gemini API key
@@ -28,7 +28,8 @@ Add to `~/.claude/settings.json`:
     }
   },
   "env": {
-    "GEMINI_API_KEY": "<your_key>"
+    "GEMINI_API_KEY": "<your_key>",
+    "TTS_VOICE": "Zephyr"
   }
 }
 ```
@@ -48,7 +49,14 @@ rm -f ~/.tts_muted    # unmute
 
 ## Voice
 
-The default voice is `Zephyr`. To change it, edit `tts/tts_hook.py` and update the `voice_name` in `play_tts()`.
+Set `TTS_VOICE` in the `env` block of `~/.claude/settings.json` (default: `Zephyr`):
+
+```json
+"env": {
+  "GEMINI_API_KEY": "<your_key>",
+  "TTS_VOICE": "Aoede"
+}
+```
 
 Available voices: Aoede, Charon, Fenrir, Kore, Leda, Orus, Puck, Schedar, Umbriel, Zephyr, Algieba, Algenib, Ankaa, Arcturus, Callirrhoe, Despina, Enceladus, Gacrux, Iocaste, Laomedeia, Lysithea, Propus, Pulcherrima, Rasalgethi, Sadachbia, Sadaltager, Sulafat, Vindemiatrix, Wasat, Zubenelgenubi.
 

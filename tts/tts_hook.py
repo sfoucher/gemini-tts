@@ -156,7 +156,8 @@ def main() -> None:
         clean = strip_markdown(text)
         if not clean:
             return
-        play_tts(clean)
+        voice = os.environ.get("TTS_VOICE", "Zephyr")
+        play_tts(clean, voice=voice)
     except Exception:
         pass
 
