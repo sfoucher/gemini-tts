@@ -60,6 +60,11 @@ Set `TTS_VOICE` in the `env` block of `~/.claude/settings.json` (default: `Zephy
 
 Available voices: Aoede, Charon, Fenrir, Kore, Leda, Orus, Puck, Schedar, Umbriel, Zephyr, Algieba, Algenib, Ankaa, Arcturus, Callirrhoe, Despina, Enceladus, Gacrux, Iocaste, Laomedeia, Lysithea, Propus, Pulcherrima, Rasalgethi, Sadachbia, Sadaltager, Sulafat, Vindemiatrix, Wasat, Zubenelgenubi.
 
+## Limitations
+
+- **Generation delay:** TTS runs synchronously after each response. Claude Code is blocked until audio finishes playing, so long responses will delay the next prompt by several seconds.
+- **Windows only:** Relies on `run-hook.cmd` and Git Bash. Not tested on macOS or Linux.
+
 ## License
 
 MIT
