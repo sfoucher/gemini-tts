@@ -1,0 +1,12 @@
+{
+  "name": "gemini-tts",
+  "description": "Auto-speaks every Claude response using Gemini TTS. Say 'mute' or 'unmute' to control playback.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Foucher",
+    "email": "samuel.foucher@gmail.com"
+  },
+  "homepage": "https://github.com/sfoucher/gemini-tts",
+  "repository": "https://github.com/sfoucher/gemini-tts",
+  "license": "MIT"
+}
